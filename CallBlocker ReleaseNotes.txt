@@ -1,0 +1,46 @@
+Application name : CallBlocker
+Version : 1.0
+Author : Sayyad Abid
+********************************************************************************* 
+
+Application Description;
+	An intelligent call blocker application that allows the user to create a list of blacklisted contacts.
+	When a call is received from blacklisted contact, the call is silently dropped and a notification is displayed to user in notification bar.
+	When a call is received from unknown number, after call is ended a confirmation dialog to add number to blacklist is displayed. User can add a number to blacklist.
+
+Following features are implemented in this release;
+	1. Blacklist creation and management
+		a. Allows the user to add numbers to blacklist. User can add number from PhoneBook/Call-logs/Manually.
+		b. While adding contact from PhoneBook if a contact has more than one number, all the numbers are shown in list.
+		c. While adding contact from PhoneBook/Call-logs the contacts which are already there in Blacklist are skipped.
+		d. Duplicate contacts can not be added.
+		e. Contact can be removed from blacklist.
+		f. SQLite database is used to store the information for Blacklisted contacts.
+		
+	2. Call Blocking
+		a. When a call is received from blacklisted contact, the call is silently dropped and a notification is displayed to user in notification bar.
+		   On clicking this notification, user is navigated to Blocked call list screen.
+		b.SQLite database is used to store the information for blocked calls.
+		
+	3. Confirmation for unknown numbers
+		a. When a call is received from unknown number, after call is ended a confirmation dialog to add number to blacklist is displayed.
+		   This dialog has 2 buttons Block and Ignore this time. On clicking of Block button, another dialog is displayed to enter the name for this number
+		  (phone number field will be set to disabled in this case) user can add a number to blacklist.
+	
+	4. Settings
+		a. Setting to show dialog for unknown numbers. When set to true, a dialog will be displayed when a call is received from unknown number.
+		b. Setting to show notification for blocked call. When set to true, a notification will be displayed if a call is blocked.
+		
+Following are the known issues;
+	1. If the application is force stopped due to Android limitation, we do not receive broadcast realted to incoming call and hence application features do not work.
+	2. If the user is on Blocked call list screen and the call is blocked, list does not refresh immediately.
+	
+Naming Conventions;
+	1. Classes : WordCasing For eg. CallBlocker
+	2. Public Methods : CamelCasing For eg. getPhoneNumber()
+	3. Private Methods : CamelCasing with underscore _ at the begining For eg. _blockCall()
+	4. Private variables : CamelCasing with underscore _ at the begining For eg. _phoneNumber
+	5. Local variables : CamelCasing
+	
+Unit testing;
+	Application is tested on Samsung Galaxy ACE and Samsung Galaxy S4

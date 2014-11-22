@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="splash_background">#B20000</color>
+    <color name="bottom_bar_button_selected">#CC0000</color>
+    <color name="bottom_bar_button_normal">#B20000</color>
+    <color name="border_background">#EEEEEA</color>
+    <color name="screen_background">#FFFFFF</color>
+
+</resources>

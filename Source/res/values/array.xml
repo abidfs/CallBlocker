@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="options_add_contact_to_blacklist">
+        <item>Add from contacts</item>
+        <item>Add from logs</item>
+        <item>Add manually</item>
+    </string-array>
+
+</resources>
